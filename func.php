@@ -14,6 +14,8 @@ if (isset($_POST['login_submit'])) {
 		echo "<script>alert('Enter Correct Details...')</script>";
 		echo "<script>window.open('index.php','_self')</script>;";
 	}
+
+	
 }
 if (isset($_POST['pat_submit'])) {
 	$fname = $_POST['fname'];

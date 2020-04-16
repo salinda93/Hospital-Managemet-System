@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include("func.php");?>
 <html>
 <head>
 	<title>Patient Details</title>
@@ -22,14 +23,14 @@
 							<input type="text" name="search" class="form-control">
 								</div>
 								<div class="col-md-2">
-							<input type="submit" name="patient_search" class="btn btn-light">
+							<input type="submit" name="patient_search" class="btn btn-light" value="Search">
 								</div></div>
 							
 						</form>
 					</div>
 			</div>
 			</div>
-			<div class="card-body">
+			<div class="card-body" style="background-color: #3498DB;color: #ffffff;">
 
 			<table class="table table-hover">
   <thead>
@@ -43,24 +44,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
+
+    <?php get_patient_details(); ?>
     
   </tbody>
 </table>
 </div>
-
 		</div>
 	</div>
-
-
-
-
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

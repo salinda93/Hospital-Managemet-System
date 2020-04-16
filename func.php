@@ -33,9 +33,28 @@ if (isset($_POST['pat_submit'])) {
 
 }
 
+function get_patient_details(){
+	global $con;
 
+	$query="select * from doctorapp";
+	$result=mysqli_query($con,$query);
 
+	while($row=mysqli_fetch_array($result)){
+		$fname = $row['fname'];
+		$lname = $row['lname'];
+		$email = $row['email'];
+		$contact = $row['contact'];
+		$docapp = $row['docapp'];
 
+		echo "<tr>
+		<td>$fname</td>
+		<td>$lname</td>
+		<td>$email</td>
+		<td>$contact</td>
+		<td>$docapp</td>
+	  </tr>";
+	}
+}
 
 
 ?>
